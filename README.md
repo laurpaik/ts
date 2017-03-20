@@ -138,7 +138,7 @@ Here we have a class with two properties and a constructor. The constructor work
 
 **private** means that this property is only available to code that exists within the scope of our class or instance.
 
-We don't want weirdos to be able alter the bunny's pregnancy (not gonna touch that one), but we DO want other code to check whether or not our bunny is pregnant. One way to accomplish this is with an **instance method.** 
+We don't want weirdos to be able alter the bunny's pregnancy (not gonna touch that one), but we DO want other code to check whether or not our bunny is pregnant. One way to accomplish this is with an **instance method.**
 
 ```typescript
 isPregnant() {
@@ -148,7 +148,7 @@ isPregnant() {
 
 We had to cut the much more explicit version of this using getters and setters, but we encourage you to [take a look at the documentation](https://www.typescriptlang.org/docs/handbook/classes.html).
 
-Finally, you can add **static properties** to your classes in TypeScript. These are properties that exist **on the class itself**. In Javascript, since classes are glorified constructor functions, and functions are objects, you would do something like this: 
+Finally, you can add **static properties** to your classes in TypeScript. These are properties that exist **on the class itself**. In Javascript, since classes are glorified constructor functions, and functions are objects, you would do something like this:
 
 ```javascript
 Bunny.numberOfLegs = 4
@@ -198,7 +198,7 @@ We define the contract that it takes for an object to be pettable, then, with ou
 
 Now lets make some animals to pet.
 
-In the **animals.ts** file, let's create an elephant class: 
+In the **animals.ts** file, let's create an elephant class:
 
 ```typescript
 class Elephant {
@@ -241,7 +241,7 @@ const stray = {
 Now we can export our two classes and our object so we can use them in our **pettable.ts** file:
 
 ```typescript
-export { Bunny, Elephant, stray }; 
+export { Bunny, Elephant, stray };
 ```
  . . . and import them at the top of **pettable.ts**.
 
@@ -276,12 +276,26 @@ Even though our three animals all have different classes, or don't have any clas
 
 -   [TypeScript Documentation](https://www.typescriptlang.org/docs/tutorial.html)
 
+## Notes
+
+-- Javascript works here LOL TypeScript is a superset of JavaScript
+-- important because browsers run in JavaScript lolol
+-- The typing lets you specify the type that a variable contains as a value
+-- Literally it won't let you call the wrong type of argument
+-- Why do we use TypeScript? bc we can do everything in JavaScript......
+-- On a component level, TypeScript helps with controlling the
+communication between components
+-- Makes things clearer when you're trying to communicate in huge companies too lol
+-- allows for complexity in simple ways
+-- Interfaces are blueprints for how a class should be implemented
+-- They allow us to standardize what happens across instances of a class
+-- Observables are kind of like event-queue-ers
+-- You have a stream of events, and .next adds another event to the stream
+-- So the observable handles that
+-- **A service is an abstraction of business logic that can be extended and injected into multiple components**
+
 ## [License](LICENSE)
 
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
 2.  All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
-
-
-
-
