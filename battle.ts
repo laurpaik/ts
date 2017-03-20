@@ -1,19 +1,23 @@
 class Warrior {
-  private wearingUnderwear: boolean;
+  public wearingUnderwear: boolean;
   public weapon: Weapon;
   public health: number;
   private fightId: number;
-  publics fullName: string;
-  constructor(fullName: number) {
+  public fullName: string;
+  constructor(fullName: string) {
     this.fullName = fullName;
     this.health = 100;
     this.wearingUnderwear = true;
   }
 
   fight(target: Warrior) {
-    this.fightId = setTimeout(this.weapon.secondsBetweenSwings, () => {
+    this.fightId = setTimeout(() => {
       this.weapon.swing(target);
-    });
+    }, this.weapon.secondsBetweenSwings);
+  }
+
+  isWearingUnderwear(): boolean {
+    return this.wearingUnderwear;
   }
 }
 
@@ -39,10 +43,17 @@ class Mace {
   public pointy: boolean;
   public numberOfPoints: number;
   public damage: number;
+  public secondsBetweenSwings: number;
   constructor() {
     this.pointy = true;
     this.numberOfPoints = 12;
     this.damage = 30;
+    this.secondsBetweenSwings = 3;
+  }
+
+  swing(target: Warrior) {
+    target.health -= this.damage;
+    console.log(`${target.fullName} is down to ${target.health} health.`);
   }
 }
 
@@ -53,10 +64,10 @@ interface Weapon {
 }
 
 let leeroy = new Warrior('Leeroy Jenkins');
-let leeroy.weapon = new Sword();
+leeroy.weapon = new Sword();
 
 let lebron = new Warrior('Lebron James');
-let lebron.weapon = new Mace();
+lebron.weapon = new Mace();
 
 leeroy.wearingUnderwear = false;
 
