@@ -278,21 +278,21 @@ Even though our three animals all have different classes, or don't have any clas
 
 ## Notes
 
--- Javascript works here LOL TypeScript is a superset of JavaScript
--- important because browsers run in JavaScript lolol
--- The typing lets you specify the type that a variable contains as a value
--- Literally it won't let you call the wrong type of argument
--- Why do we use TypeScript? bc we can do everything in JavaScript......
--- On a component level, TypeScript helps with controlling the
+- Javascript works here LOL TypeScript is a superset of JavaScript
+- important because browsers run in JavaScript lolol
+- The typing lets you specify the type that a variable contains as a value
+- Literally it won't let you call the wrong type of argument
+- Why do we use TypeScript? bc we can do everything in JavaScript......
+- On a component level, TypeScript helps with controlling the
 communication between components
--- Makes things clearer when you're trying to communicate in huge companies too lol
--- allows for complexity in simple ways
--- Interfaces are blueprints for how a class should be implemented
--- They allow us to standardize what happens across instances of a class
--- Observables are kind of like event-queue-ers
--- You have a stream of events, and .next adds another event to the stream
--- So the observable handles that
--- **A service is an abstraction of business logic that can be extended and injected into multiple components**
+- Makes things clearer when you're trying to communicate in huge companies too lol
+- allows for complexity in simple ways
+- Interfaces are blueprints for how a class should be implemented
+- They allow us to standardize what happens across instances of a class
+- Observables are kind of like event-queue-ers
+- You have a stream of events, and .next adds another event to the stream
+- So the observable handles that
+- **A service is an abstraction of business logic that can be extended and injected into multiple components**
 
 ## [License](LICENSE)
 
